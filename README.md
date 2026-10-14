@@ -78,7 +78,29 @@ graph TD
 
 ---
 
-## 4. Modelo de Datos (Diagrama Entidad-Relación)
+## 📊 Ingeniería de Requerimientos y Modelo de Datos (Análisis de Sistemas)
+
+Como parte del rol de **Analista de Sistemas**, el diseño del sistema contempló una especificación rigurosa de requerimientos y un modelado conceptual y lógico de base de datos relacional para garantizar consistencia operativa e integridad en la trazabilidad académica.
+
+### 1. Requerimientos Funcionales (RF) Principales
+- **RF-01 (Control de Acceso y Roles):** Autenticación institucional con segregación de privilegios para roles Directivo/Administrativo, Docente y Estudiante.
+- **RF-02 (Búsqueda Académica Multicriterio):** Localización inmediata de legajos y docentes por DNI, CUIL, nombre o apellido, con acceso directo a la ficha académica consolidada.
+- **RF-03 (Alta Secuencial de Alumnos):** Formulario de carga en dos fases con validación algorítmica del dígito verificador de CUIL (algoritmo Módulo 11 oficial de ANSES) y persistencia atómica en base de datos.
+- **RF-04 (Importación Masiva desde Planillas):** Procesamiento e ingesta masiva de estudiantes y docentes a partir de planillas Excel (`.xlsx`), con saneamiento de caracteres y reporte estructurado de inconsistencias por fila.
+- **RF-05 (Estructura Curricular Dinámica):** Modelado y administración de tecnicaturas superiores, resoluciones ministeriales, materias correlativas y apertura de comisiones por ciclo lectivo y turno.
+- **RF-06 (Gestión de Cursada y Regularidad):** Registro de inscripciones a comisiones, seguimiento del porcentaje de asistencia y cómputo de la situación final (Promocionado, Final, Regular, Libre).
+- **RF-07 (Generación del Libro Matriz y Analíticos):** Automatización del Libro Matriz reglamentario oficial agrupado por folios y exportación de certificados de analítico parcial con cálculo dinámico de promedios ponderados.
+
+### 2. Requerimientos No Funcionales (RNF) Clave
+- **RNF-01 (Seguridad Web Integral):** Protección contra ataques CSRF (Cross-Site Request Forgery) mediante tokens criptográficos por formulario, mitigación de XSS (Cross-Site Scripting) mediante sanitización y escape de plantillas, almacenamiento seguro de credenciales con hashing PBKDF2 con SHA-256 y sesiones con flags `HTTPOnly` y `SameSite`.
+- **RNF-02 (Integridad Referencial y Consistencia ACID):** Restricciones de integridad referencial estrictas a nivel motor (`FOREIGN KEY` activas en SQLite mediante `PRAGMA foreign_keys = ON` y nativas en PostgreSQL), con transacciones atómicas (`transaction.atomic`) en operaciones batch de carga e importación para evitar estados inconsistentes.
+- **RNF-03 (Generación de Reportes de Alto Rendimiento):** Exportación dinámica de planillas Excel normalizadas mediante la librería `openpyxl`, estructurando celdas, estilos y fórmulas oficiales de manera eficiente.
+- **RNF-04 (Contenedorización y Portabilidad):** Arquitectura reproducible basada en Docker y Docker Compose para aislar el entorno de ejecución (Django + Gunicorn + PostgreSQL + WhiteNoise), facilitando el despliegue tanto en servidores productivos como en estaciones de desarrollo.
+- **RNF-05 (Confiabilidad y Cobertura de Pruebas):** Suite de 75 pruebas unitarias y de integración automatizadas (`Django TestCase` / `unittest`) que validan la capa de servicios, repositorios, controladores y validadores algorítmicos.
+
+### 3. Diagrama Entidad-Relación (DER)
+
+A continuación se detalla el modelo de datos relacional normalizado que soporta la arquitectura del sistema:
 
 ```mermaid
 erDiagram
