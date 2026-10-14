@@ -226,7 +226,7 @@ def carrera_eliminar(request, codigo_carrera: str):
 
 @directivo_requerido
 def imprimir_plan_estudio(request, codigo_carrera: str):
-    """Vista imprimible del plan de estudios oficial con membrete del ISFT N° 188."""
+    """Vista imprimible del plan de estudios oficial con membrete del Instituto Superior."""
     try:
         contexto = contenedor.plan_imprimible.ejecutar(codigo_carrera)
     except RegistroNoEncontradoError as e:

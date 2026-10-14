@@ -45,7 +45,7 @@ class CarreraForm(forms.ModelForm):
         widgets = {
             'codigo_carrera': forms.TextInput(attrs={
                 'class': INPUT_CLASS + ' font-mono uppercase',
-                'placeholder': 'Ej. DESARROLLO-SOFTWARE-188',
+                'placeholder': 'Ej. DESARROLLO-SOFTWARE-INST',
                 'autocomplete': 'off',
             }),
             'nombre_carrera': forms.TextInput(attrs={

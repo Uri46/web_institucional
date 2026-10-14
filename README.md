@@ -1,6 +1,6 @@
-# Sistema de Gestión Académica (SGA) — ISFT N° 188
+# Sistema de Gestión Académica Web Institucional (SGA)
 
-Plataforma web institucional orientada a la administración académica integral del Instituto Superior de Formación Técnica N° 188 (General Rodríguez, Provincia de Buenos Aires).
+Plataforma web institucional orientada a la administración académica integral de instituciones de educación superior técnica.
 
 El sistema centraliza y optimiza la gestión de planes de estudio, carreras técnicas oficiales, matriculación de estudiantes, asignación docente, comisiones, actas de cursada, emisión de analíticos y la generación del Libro Matriz reglamentario.
 
@@ -172,8 +172,8 @@ erDiagram
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/Uri46/sga-isft-188-public.git
-   cd sga-isft-188-public
+   git clone https://github.com/Uri46/web_institucional.git
+   cd web_institucional
    ```
 
 2. **Crear y activar un entorno virtual:**
@@ -312,14 +312,8 @@ python manage.py test tests
 
 ---
 
-## 9. Equipo
+## 9. Equipo de Desarrollo
 
-Proyecto desarrollado en equipo durante las prácticas profesionales del ISFT N° 188, desde el relevamiento de requerimientos hasta el desarrollo.
+Proyecto desarrollado en equipo colaborativo (7 integrantes) durante las prácticas profesionales de la tecnicatura, abarcando desde el relevamiento de requerimientos y diseño de arquitectura modular hasta la implementación, normalización relacional y suite de testing automatizado.
 
-- Franco Diaz
-- Eduardo Mendez
-- Nehuen Mattea
-- Franco Ruffin
-- Thomas Espejo
-- Hector Uriel Taño
-- Emmanuel Villalba
+- **Rol:** Analista de Sistemas y Desarrollador Web Backend

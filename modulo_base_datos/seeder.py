@@ -1,4 +1,4 @@
-"""Comando de sembrado de datos de demostración 100% sintéticos para el SGA (ISFT N° 188).
+"""Comando de sembrado de datos de demostración 100% sintéticos para el SGA (Web Institucional).
 
 Genera:
 1. Catálogo oficial de Carreras, Materias y Planes de Estudio.

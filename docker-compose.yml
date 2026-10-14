@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: isft188_modular_web
+    container_name: web_institucional_app
     restart: always
     stdin_open: true  # Soporte para consola interactiva
     tty: true         # Asignación de pseudo-TTY interactivo
@@ -30,7 +30,7 @@ services:
 
   db:
     image: postgres:16-alpine
-    container_name: isft188_modular_postgres
+    container_name: web_institucional_postgres
     restart: always
     environment:
       - POSTGRES_DB=${DB_NAME:-sga_db}

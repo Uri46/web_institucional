@@ -42,7 +42,7 @@ class GenerarPlantillaAlumnos:
 
     def ejecutar(self) -> Tuple[Any, str]:
         excel_stream = generar_plantilla_alumnos_excel()
-        filename = "Plantilla_Carga_Alumnos_ISFT188.xlsx"
+        filename = "Plantilla_Carga_Alumnos.xlsx"
         return excel_stream, filename
 
 

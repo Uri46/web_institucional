@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>{% block title %}ISFT 188 - Buscador de Estudiantes{% endblock %}</title>
+    <title>{% block title %}SGA Institucional - Buscador de Estudiantes{% endblock %}</title>
 
     <!-- Inicializacion de Tema -->
     <script>
         (function() {
             try {
-                var savedTheme = localStorage.getItem('isft188_theme') || 'dark';
+                var savedTheme = localStorage.getItem('sga_theme') || 'dark';
                 if (savedTheme === 'light') {
                     document.documentElement.classList.remove('dark');
                     document.documentElement.classList.add('light');
@@ -22,7 +22,7 @@
         })();
     </script>
     
-    <!-- Favicon Oficial ISFT 188 -->
+    <!-- Favicon Oficial SGA Institucional -->
     <link rel="icon" type="image/png" href="{% static 'favicon.png' %}"/>
 
     <!-- Estilos Locales Offline-First -->
@@ -312,7 +312,7 @@
                 <img id="logoLight" src="{% static 'img/logo_light.svg' %}" alt="SGA" class="w-full h-full logo-circular hidden">
             </div>
             <div>
-                <span class="text-xs md:text-sm uppercase tracking-wider text-indigo-500 font-bold block">Instituto Superior de Formación Técnica N° 188</span>
+                <span class="text-xs md:text-sm uppercase tracking-wider text-indigo-500 font-bold block">Instituto Superior de Formación Técnica</span>
                 <h1 class="text-lg md:text-2xl font-black leading-tight theme-text-main">Sistema de Gestión Académica</h1>
             </div>
         </div>
@@ -422,7 +422,7 @@
 
     <!-- Pie de Pagina -->
     <footer class="border-t py-4 px-8 text-center text-xs theme-text-muted" style="border-color: var(--header-border); background: var(--card-inner-bg);">
-        ISFT N° 188 — General Rodríguez
+        SGA Institucional — General Rodríguez
     </footer>
 
     <script>
@@ -449,7 +449,7 @@
                 if (logoLight) logoLight.classList.add('hidden');
             }
             try {
-                localStorage.setItem('isft188_theme', theme);
+                localStorage.setItem('sga_theme', theme);
             } catch (e) {}
         }
 
@@ -529,7 +529,7 @@
                 window.ocultarCargando();
             }
 
-            const savedTheme = localStorage.getItem('isft188_theme') || 'dark';
+            const savedTheme = localStorage.getItem('sga_theme') || 'dark';
             applyTheme(savedTheme);
 
             // Limpieza automática de queries en la barra de direcciones

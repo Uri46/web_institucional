@@ -1,4 +1,4 @@
-"""Django settings para la arquitectura sga_modular del Sistema de Gestión Académica (ISFT N° 188)."""
+"""Django settings para la arquitectura sga_modular del Sistema de Gestión Académica (Web Institucional)."""
 
 import os
 from pathlib import Path

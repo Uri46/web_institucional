@@ -9,7 +9,7 @@ from modulo_base_datos.models import Carrera, Alumno, Cursada, PlanEstudio, Mate
 def generar_libro_matriz_excel(carrera_obj):
     """
     Genera el archivo Excel oficial del Libro Matriz para una carrera específica
-    según la estructura reglamentaria del ISFT N° 188.
+    según la estructura reglamentaria institucional.
     Incluye:
     - Resumen general con estudiantes, cohorte, estado de egreso y legajo.
     - Planillas de calificaciones por cada año de cursada.
@@ -89,7 +89,7 @@ def generar_libro_matriz_excel(carrera_obj):
     
     # Encabezado Institucional y Metadatos de Carrera
     ws_matriz.merge_cells('A1:G1')
-    ws_matriz['A1'] = "INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA N° 188 — LIBRO MATRIZ"
+    ws_matriz['A1'] = "INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA — LIBRO MATRIZ"
     ws_matriz['A1'].font = font_title
     ws_matriz['A1'].alignment = align_center
 

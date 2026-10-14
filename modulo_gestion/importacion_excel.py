@@ -120,7 +120,7 @@ def generar_plantilla_alumnos_excel():
     # Titulo institucional
     ws.merge_cells("A1:M1")
     t_cell = ws["A1"]
-    t_cell.value = "INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA N° 188 — PLANTILLA OFICIAL DE CARGA DE ESTUDIANTES"
+    t_cell.value = "INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA — PLANTILLA OFICIAL DE CARGA DE ESTUDIANTES"
     t_cell.font = Font(name="Arial", size=11, bold=True, color="FFFFFF")
     t_cell.fill = PatternFill(start_color="0F172A", end_color="0F172A", fill_type="solid")
     t_cell.alignment = Alignment(horizontal="center", vertical="center")
@@ -182,7 +182,7 @@ def generar_plantilla_alumnos_excel():
     
     ws_ref.merge_cells("A1:C1")
     t_ref = ws_ref["A1"]
-    t_ref.value = "LISTADO DE CARRERAS OFICIALES — ISFT N° 188"
+    t_ref.value = "LISTADO DE CARRERAS OFICIALES — INSTITUTO SUPERIOR"
     t_ref.font = Font(name="Arial", size=11, bold=True, color="FFFFFF")
     t_ref.fill = PatternFill(start_color="1E3A8A", end_color="1E3A8A", fill_type="solid")
     t_ref.alignment = Alignment(horizontal="center", vertical="center")

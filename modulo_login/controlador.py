@@ -31,7 +31,7 @@ class LoginView(DjangoLoginView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context.update({
-            'page_title': 'Acceso al Sistema — ISFT N° 188',
+            'page_title': 'Acceso al Sistema — SGA Institucional',
             'login_label': 'Autenticación Institucional',
             'login_heading': 'Ingreso al Sistema',
         })

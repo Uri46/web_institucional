@@ -3,7 +3,7 @@ set -e
 
 PORT="${PORT:-8000}"
 
-echo "Iniciando servicio para ISFT 188 (Arquitectura Modular) en el puerto ${PORT}..."
+echo "Iniciando servicio para SGA Institucional (Arquitectura Modular) en el puerto ${PORT}..."
 
 # Intentar conectar a PostgreSQL con tiempo límite máximo (15 segundos)
 if [ "$DB_ENGINE" = "postgresql" ] || [ -n "$DATABASE_URL" ] || [ -n "$DB_HOST" ]; then

@@ -1,4 +1,4 @@
-"""Orquestador Principal e Inyección de Dependencias (SGA Modular - ISFT N° 188).
+"""Orquestador Principal e Inyección de Dependencias (SGA Modular - Web Institucional).
 
 Este archivo actúa como el punto de entrada unificado y orquestador del sistema:
 1. Expone el contenedor de dependencias (`contenedor`) para su inyección en servicios y casos de uso.
@@ -24,7 +24,7 @@ from config.contenedor import contenedor, ContenedorDependencias
 def menu_interactivo():
     """Consola interactiva para administración y diagnóstico del SGA."""
     print("=" * 65)
-    print("      SISTEMA DE GESTIÓN ACADÉMICA (SGA) — ISFT N° 188")
+    print("      SISTEMA DE GESTIÓN ACADÉMICA (SGA) — WEB INSTITUCIONAL")
     print("                  Arquitectura Modular v2.0")
     print("=" * 65)
     print("1. Iniciar Servidor Web (0.0.0.0:8000)")
